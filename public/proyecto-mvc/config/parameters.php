@@ -1,6 +1,6 @@
 <?php
 
-define('base_url','http://localhost/proyecto-mvc/');
+define('base_url','http://www.adrianweb.live/proyecto-mvc/');
 define('controller_default','productoController');
 define('action_default','index');
 //PARA LIMPIAR LA URL

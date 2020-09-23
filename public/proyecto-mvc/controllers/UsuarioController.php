@@ -40,7 +40,7 @@ public function save(){
   }else{
     $_SESSION['register'] = "failed";
   }
-  header("Location:".base_url.'usuario/registro');
+  header("Location:".base_url.'Usuario/registro');
   }
 
   public function login(){

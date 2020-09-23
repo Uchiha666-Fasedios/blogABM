@@ -1,7 +1,7 @@
 <?php
 require_once 'models/producto.php';
 
-class carritoController{
+class CarritoController{
 
 	public function index(){
 		if(isset($_SESSION['carrito']) && count($_SESSION['carrito']) >= 1){
@@ -46,7 +46,7 @@ class carritoController{
 			}
 		}
 
-		header("Location:".base_url."carrito/index");
+		header("Location:".base_url."Carrito/index");
 	}
 
 	public function delete(){
@@ -54,7 +54,7 @@ class carritoController{
 			$index = $_GET['index'];
 			unset($_SESSION['carrito'][$index]);
 		}
-		header("Location:".base_url."carrito/index");
+		header("Location:".base_url."Carrito/index");
 	}
 
 	public function up(){//esta funcion se llama desde vista/carrito/index.php cuando toco el + del producto
@@ -62,7 +62,7 @@ class carritoController{
 			$index = $_GET['index'];//el $_GET['index'] tiene el indice del producto de $_SESSION['carrito']
 			$_SESSION['carrito'][$index]['unidades']++;//y aca le digo q en la $_SESSION['carrito'] le sume uno en [$index]['unidades'] la cual [$index] marca la pocicion traida del get
 		}
-		header("Location:".base_url."carrito/index");
+		header("Location:".base_url."Carrito/index");
 	}
 
 	public function down(){//esta funcion se llama desde vista/carrito/index.php cuando toco el + del producto
@@ -74,12 +74,12 @@ class carritoController{
 				unset($_SESSION['carrito'][$index]);//elimino unicamente de la session q tenga esa posicion [$index]
 			}
 		}
-		header("Location:".base_url."carrito/index");
+		header("Location:".base_url."Carrito/index");
 	}
 
 	public function delete_all(){
 		unset($_SESSION['carrito']);//elimina la session entera
-		header("Location:".base_url."carrito/index");
+		header("Location:".base_url."Carrito/index");
 	}
 
 }

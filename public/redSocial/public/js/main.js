@@ -1,4 +1,4 @@
-var url = 'http://localhost/blogLaravel/redsocial/public/';
+var url = 'http://www.adrianweb.live/redSocial/public/';
 window.addEventListener("load", function() { //window.addEventListener("load" cuando carga la pagina
 
     $('.btn-like').css('cursor', 'pointer');

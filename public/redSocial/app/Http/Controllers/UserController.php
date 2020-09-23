@@ -48,8 +48,7 @@ class UserController extends Controller
   			'surname' => 'required|string|max:255',
   			'nick' => 'required|string|max:255|unique:users,nick,'.$id,//unique:users,nick q sea unico en la tabla de usuarios a excepción de q el nick coincida con el q esta logeado
               'email' => 'required|string|email|max:255|unique:users,email,'.$id//unique:users q sea unico en la tabla de usuarios a excepción de q el email coincida con el q esta logeado
-			  
-			  ]);
+          ]);
 
   		// Recoger datos del formulario
   		$name = $request->input('name');

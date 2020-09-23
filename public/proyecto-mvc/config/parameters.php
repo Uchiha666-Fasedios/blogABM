@@ -1,7 +1,7 @@
 <?php
 
 define('base_url','http://www.adrianweb.live/proyecto-mvc/');
-define('controller_default','ProductoController');
+define('controller_default','productoController');
 define('action_default','index');
 //PARA LIMPIAR LA URL
 //activar rewrite_module en Apache con XAMPP

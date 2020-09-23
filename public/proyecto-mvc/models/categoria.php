@@ -47,32 +47,12 @@ class Categoria{
 	}
 
 
-	public function edi(){
-		$sql = "UPDATE categorias SET nombre='{$this->getNombre()}', id={$this->getId()}";
-//.= estamos concatenando la query
-		
-
-		$sql .= " WHERE id={$this->id};";
-
-
+	public function editar($id){
+		$sql = "UPDATE categorias SET nombre = {$this->getNombre()} WHERE id = $id;";
 		$save = $this->db->query($sql);
 
 		$result = false;
 		if($save){
-			$result = true;
-		}
-		return $result;
-	}
-
-	
-	
-
-	public function delete(){
-		$sql = "DELETE FROM categorias WHERE id={$this->id}";
-		$delete = $this->db->query($sql);
-
-		$result = false;
-		if($delete){
 			$result = true;
 		}
 		return $result;

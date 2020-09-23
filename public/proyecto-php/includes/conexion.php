@@ -2,7 +2,7 @@
 // Conexión
 $servidor = 'localhost';
 $usuario = 'root';
-$password = '111';
+$password = '';
 $basededatos = 'blogphp';
 $db = mysqli_connect($servidor, $usuario, $password, $basededatos);
 
